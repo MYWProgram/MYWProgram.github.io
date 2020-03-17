@@ -1,10 +1,10 @@
 # Site settings
 title: Y Blog
-SEOTitle: 马亚文的博客 | Y Blog | mayawen的博客 | _3Y3的博客
+SEOTitle: Y Blog | _3Y3的博客 | mayawen的博客 | 马亚文的博客
 header-img: img/post-bg-desk.jpg
 email: mayawen0724@gmail.com
 description: "Every failure is leading towards success."
-keyword: "Y, Myw Blog, 马亚文的博客, mayawen, 马亚文, Fronte-end, HTML, CSS, JavaScript, Vue, React, Flutter, Electron, Node"
+keyword: "Y Blog, Myw Blog, 马亚文的博客, mayawen, 马亚文, Fronte-end, HTML, CSS, JavaScript, Vue, React, Flutter, Electron, Node"
 # your host, for absolute URL
 url: "http://MYWProgram.github.io"
 # for example, '/blog' if your blog hosted on 'host/blog'
@@ -17,7 +17,7 @@ github_repo: "https://github.com/MYWProgram/MYWProgram.github.io.git"
 sidebar: true
 sidebar-about-description: "Goals determine what you going to be!"
 # use absolute URL, seeing it's used in both `/` and `/about/`
-sidebar-avatar: /img/about-BY-gentle.jpg
+sidebar-avatar: /img/my-avatar.jpg
 
 # SNS settings
 RSS: false
