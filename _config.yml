@@ -42,25 +42,17 @@ gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: rouge
 kramdown:
-	# use Github Flavored Markdown !important
-  input: GFM
+  input: GFM # use Github Flavored Markdown !important
 
 # 评论系统
 # Gitalk
 gitalk:
-	#是否开启Gitalk评论
-  enable: true
-	#生成的clientID
-  clientID: 9646744b0f565e065e57
-	#生成的clientSecret
-  clientSecret: 3afba2c67c73d1706a470f40749c22401cd6b3eb
-	#仓库名称
-  repo: MYWProgram.github.io
-	#github用户名
-  owner: MYWProgram
-  admin: MYWProgram
-	#是否启用类似FB的阴影遮罩
-  distractionFreeMode: true
+  enable: true #是否开启Gitalk评论
+  clientID: 9646744b0f565e065e57 #生成的clientID
+  clientSecret: 3afba2c67c73d1706a470f40749c22401cd6b3eb #生成的clientSecret
+  repo: MYWProgram.github.io #仓库名称
+  owner: MYWProgram #github用户名
+  admin: MYWProgram #管理员用户名
 
 # 统计
 # Analytics settings
