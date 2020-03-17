@@ -1,48 +1,39 @@
 # Site settings
-title: BY Blog
-SEOTitle: 柏荧的博客 | BY Blog
+title: Y Blog
+SEOTitle: 马亚文的博客 | Y Blog | mayawen的博客 | _3Y3的博客
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
+email: mayawen0724@gmail.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+keyword: "Y, Myw Blog, 马亚文的博客, mayawen, 马亚文, Fronte-end, HTML, CSS, JavaScript, Vue, React, Flutter, Electron, Node"
+# your host, for absolute URL
+url: "http://MYWProgram.github.io"
+# for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""
+# you code repository
+github_repo: "https://github.com/MYWProgram/MYWProgram.github.io.git"
 
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
+# whether or not using Sidebar.
+sidebar: true
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
+# use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/about-BY-gentle.jpg
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
-zhihu_username:     qiubaiying
-github_username:    qiubaiying
-facebook_username:  baiying.qiu.7
-jianshu_username:   e71990ada2fd
-#twitter_username:   qiubaiying
-
-
-
+github_username: MYWprogram
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+# if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
-
-
-
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -51,64 +42,48 @@ gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: rouge
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
+	# use Github Flavored Markdown !important
+  input: GFM
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
-
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
+	#是否开启Gitalk评论
+  enable: true
+	#生成的clientID
+  clientID: 9646744b0f565e065e57
+	#生成的clientSecret
+  clientSecret: 3afba2c67c73d1706a470f40749c22401cd6b3eb
+	#仓库名称
+  repo: MYWProgram.github.io
+	#github用户名
+  owner: MYWProgram
+  admin: MYWProgram
+	#是否启用类似FB的阴影遮罩
+  distractionFreeMode: true
 
 # 统计
-
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
-
+ba_track_id: 3e204399a2614d5108a117b2482364b8
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
-
-
-
-
+# Format: UA-xxxxxx-xx
+ga_track_id: "UA-160660294-1"
+# 默认的是 auto, 这里是自定义的域名，如果没有自己的域名，需要改成auto
+ga_domain: auto
 
 # Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
+# 是否使用首页标签
+featured-tags: true
+# 相同标签数量大于这个数，才会出现在首页
+featured-condition-size: 1
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-
-
 # Friends
-friends: [
-    {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    }
-]
+friends:
+  [
+    { title: "掘金·Myw", href: "https://juejin.im/user/5ccedba56fb9a0321f042c4c" }
+  ]
