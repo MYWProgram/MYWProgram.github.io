@@ -1,22 +1,21 @@
 ---
 layout: default
 ---
-
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 <!-- Post Header -->
 <style type="text/css">
   header.intro-header{
-      position: relative;
-      background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+    position: relative;
+    background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
   }
   {% if page.header-mask %}
   header.intro-header .header-mask{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: rgba(0,0,0, {{ page.header-mask }});
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0, {{ page.header-mask }});
   }
   {% endif %}
 </style>
@@ -59,14 +58,12 @@ layout: default
       <!-- Post Container -->
       <div
         class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container"
+          col-lg-8 col-lg-offset-2
+          col-md-10 col-md-offset-1
+          post-container"
       >
         {{ content }}
-
         <hr style="visibility: hidden;" />
-
         <ul class="pager">
           {% if page.previous.url %}
           <li class="previous">
@@ -94,7 +91,6 @@ layout: default
           </li>
           {% endif %}
         </ul>
-
         <!-- Gitalk 评论 start  -->
         {% if site.gitalk.enable %}
         <!-- Gitalk link  -->
@@ -122,15 +118,14 @@ layout: default
         {% endif %}
         <!-- Gitalk end -->
       </div>
-
       <!-- Side Catalog Container -->
       {% if page.catalog %}
       <div
         class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container"
+          col-lg-2 col-lg-offset-0
+          visible-lg-block
+          sidebar-container
+          catalog-container"
       >
         <div class="side-catalog">
           <hr class="hidden-sm hidden-xs" />
@@ -141,13 +136,12 @@ layout: default
         </div>
       </div>
       {% endif %}
-
       <!-- Sidebar Container -->
       <div
         class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container"
+          col-lg-8 col-lg-offset-2
+          col-md-10 col-md-offset-1
+          sidebar-container"
       >
         <!-- Featured Tags -->
         {% if site.featured-tags %}
@@ -168,7 +162,6 @@ layout: default
           </div>
         </section>
         {% endif %}
-
         <!-- Friends Blog -->
         {% if site.friends %}
         <hr />
@@ -183,28 +176,7 @@ layout: default
     </div>
   </div>
 </article>
-
-{% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES * * */
-  var disqus_shortname = "{{site.disqus_username}}";
-  var disqus_identifier = "{{page.id}}";
-  var disqus_url = "{{site.url}}{{page.url}}";
-
-  (function() {
-    var dsq = document.createElement("script");
-    dsq.type = "text/javascript";
-    dsq.async = true;
-    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-    (
-      document.getElementsByTagName("head")[0] ||
-      document.getElementsByTagName("body")[0]
-    ).appendChild(dsq);
-  })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %} {% if site.anchorjs %}
+{% if site.anchorjs %}
 <!-- async load function -->
 <script>
   function async(u, c) {
@@ -230,12 +202,6 @@ layout: default
   async(
     "//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",
     function() {
-      // BY Fix:去除标题前的‘#’ issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
-      // anchors.options = {
-      //   visible: 'always',
-      //   placement: 'right',
-      //   icon: '#'
-      // };
       anchors
         .add()
         .remove(".intro-header h1")
