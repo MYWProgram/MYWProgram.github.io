@@ -2,7 +2,7 @@
 layout: post
 title: 关于canvas的Bug记录
 subtitle: display:none制作导航，canvas加载错误
-date: 2019-03-16
+date: 2019-03-18
 author: Myw
 header-img: img/post-normal-bg.jpg
 catalog: true
