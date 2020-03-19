@@ -78,6 +78,32 @@ layout: default
 					</li>
 					{% endif %}
 				</ul>
+				<!-- Gitalk 评论 start  -->
+        {% if site.gitalk.enable %}
+        <!-- Gitalk link  -->
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/gitalk/dist/gitalk.css"
+        />
+        <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+        <div id="gitalk-container"></div>
+        <script type="text/javascript">
+          var gitalk = new Gitalk({
+            clientID: "{{site.gitalk.clientID}}",
+            clientSecret: "{{site.gitalk.clientSecret}}",
+            repo: "{{site.gitalk.repo}}",
+            owner: "{{site.gitalk.owner}}",
+            admin: ["{{site.gitalk.admin}}"],
+            distractionFreeMode: true,
+            id: location.pathname
+              .split("/")
+              .pop()
+              .substring(0, 49)
+          });
+          gitalk.render("gitalk-container");
+        </script>
+        {% endif %}
+        <!-- Gitalk end -->
 			</div>
 			<!-- Sidebar Container -->
 			<div class="sidebar-container
