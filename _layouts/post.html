@@ -5,14 +5,12 @@ layout: default
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
 <!-- Post Header -->
 <style type="text/css">
   header.intro-header{
       position: relative;
       background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
   }
-
   {% if page.header-mask %}
   header.intro-header .header-mask{
       width: 100%;
@@ -114,7 +112,10 @@ layout: default
             owner: "{{site.gitalk.owner}}",
             admin: ["{{site.gitalk.admin}}"],
             distractionFreeMode: true,
-            id: (location.pathname).split("/").pop().substring(0, 49)
+            id: location.pathname
+              .split("/")
+              .pop()
+              .substring(0, 49)
           });
           gitalk.render("gitalk-container");
         </script>
