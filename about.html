@@ -39,7 +39,7 @@ header-img: "img/post-bg-rwd.jpg"
 <!-- Gitalk link  -->
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-<script src="/js/md5.min.js"></script>
+<!-- <script src="/js/md5.min.js"></script> -->
 <div id="gitalk-container"></div>
 <script type="text/javascript">
   var gitalk = new Gitalk({
@@ -49,7 +49,8 @@ header-img: "img/post-bg-rwd.jpg"
     owner: "{{site.gitalk.owner}}",
     admin: ["{{site.gitalk.admin}}"],
     distractionFreeMode: true,
-    id: md5(window.location.pathname)
+    // id: md5(window.location.pathname)
+    id: (location.pathname).split("/").pop().substring(0, 49)
   });
   gitalk.render("gitalk-container");
 </script>
