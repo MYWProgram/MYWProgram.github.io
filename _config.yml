@@ -20,8 +20,10 @@ sidebar-about-description: "Goals determine what you going to be!"
 sidebar-avatar: /img/my-avatar.jpg
 
 # SNS settings
+# 这里的配置在 page.html 中。
 RSS: false
 github_username: MYWprogram
+weibo_username: _3Y3
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
