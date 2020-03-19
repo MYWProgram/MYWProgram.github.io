@@ -537,6 +537,7 @@ pre code {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading {
     padding: 150px 0;
+    margin-top: 80px;
   }
 }
 .intro-header .site-heading,
