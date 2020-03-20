@@ -501,7 +501,8 @@ pre code {
   }
 }
 .intro-header {
-  background: no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: 25% 25%;
   background-color: #808080;
   background-attachment: scroll;
   -webkit-background-size: cover;
