@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 关于canvas的Bug记录
-subtitle: display:none制作导航，canvas加载错误
+subtitle: 导致canvas加载错误的因素
 date: 2019-03-18
 author: Myw
 header-img: img/post-normal-bg.jpg

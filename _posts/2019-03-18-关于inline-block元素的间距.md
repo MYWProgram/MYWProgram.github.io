@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 关于inline-block元素的间距
-subtitle: 怎样消除行内块元素的间距
+subtitle: 行内块级元素的间距与消除间距
 date: 2019-03-18
 author: Myw
 header-img: img/post-normal-bg.jpg
