@@ -165,6 +165,8 @@ this.$router.push({
 
 在开发中常常遇到根据路由的变化来实时地进行一些操作的需求，可以使用 watch 来监听路由对象完成这一实现。
 
+### 使用 watch
+
 举个例子，导航栏点击了对应的 item，刷新之后高亮的 item 不变：
 
 ```js
@@ -183,9 +185,24 @@ export default {
 };
 ```
 
-如果页面时多层级嵌套，而导航是一个公共的底部的 tabbar，还可以配合使用`sessionStorage`来保存当前高亮的 item，在 data 中进行获取（需要添加全局的设置 activeNavItem 的方法）。
+### 使用导航守卫
+
+还是上面的例子，使用路由提供的钩子函数来解决：
 
 ```js
+// 配置路由独享守卫。
+{
+  path: "/about/:id",
+  name: "About",
+  component: About,
+  beforeEnter: (to, from, next) => {
+    if (["Home", "About"].includes(to.name)) {
+      window.sessionStorage.setItem("activeNavItem", to.name);
+    }
+    next();
+  }
+}
+// 导航页面获取。
 export default {
   data() {
     return {
@@ -194,6 +211,24 @@ export default {
   }
 }
 ```
+
+当然还可以使用组件内的守卫：
+
+```js
+export default {
+  beforeRouteEnter(to, from, next) {
+    if (["Home", "About"].includes(to.name)) {
+      window.sessionStorage.setItem("activeNavItem", to.name);
+    }
+    next();
+  }
+}
+```
+
+使用路由提供的钩子，需要注意以下两点：
+
+1. 钩子函数内的三个参数不要忘记写。
+2. 函数结尾需要调用`next()`，否则路由将会被拦截不再进行跳转。
 
 ## 后记
 
