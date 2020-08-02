@@ -161,6 +161,15 @@ this.$router.push({
 
 上面的方式加入了正则来对参数进行验证；就只能传递 id 为数字，color 为 16 进制颜色；否则将不能正确获取参数。
 
+## 新窗口跳转
+
+`this.$touter.push()`方法只能在浏览器当前 tab 页进行跳转，有时候需要打开新窗口并携带参数，可以使用下面这个 API:
+
+```js
+let routeData = this.$router.resolve({ path: '/xxx', query: {  id: id } });
+window.open(routeData.href, '_blank');
+```
+
 ## 路由监听
 
 在开发中常常遇到根据路由的变化来实时地进行一些操作的需求，可以使用 watch 来监听路由对象完成这一实现。
